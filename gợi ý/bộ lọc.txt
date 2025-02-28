@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bộ Lọc Sản Phẩm</title>
+    <style>
+        body { font-family: Arial, sans-serif; }
+        .filter-section { margin-bottom: 20px; border: 1px solid #ddd; padding: 10px; border-radius: 5px; }
+        .filter-title { font-size: 18px; font-weight: bold; }
+        .filter-group { margin-top: 10px; }
+        .filter-group label { display: block; margin: 5px 0; }
+    </style>
+</head>
+<body>
+    <h2>Bộ Lọc Sản Phẩm</h2>
+    
+    <!-- Bộ lọc dụng cụ nấu ăn -->
+    <div class="filter-section">
+        <div class="filter-title">Dụng cụ nấu ăn</div>
+        <div class="filter-group">
+            <strong>Loại sản phẩm:</strong>
+            <label><input type="checkbox" class="filter" value="nồi"> Nồi</label>
+            <label><input type="checkbox" class="filter" value="chảo"> Chảo</label>
+            <label><input type="checkbox" class="filter" value="bếp"> Bếp</label>
+            <label><input type="checkbox" class="filter" value="ly"> Ly</label>
+            <label><input type="checkbox" class="filter" value="chén"> Chén</label>
+            <label><input type="checkbox" class="filter" value="đĩa"> Đĩa</label>
+        </div>
+        <div class="filter-group">
+            <strong>Khoảng giá:</strong>
+            <label><input type="checkbox" class="price-filter" value="0-500000"> 0 - 500,000</label>
+            <label><input type="checkbox" class="price-filter" value="500000-1000000"> 500,000 - 1,000,000</label>
+            <label><input type="checkbox" class="price-filter" value="1000000-5000000"> 1,000,000 - 5,000,000</label>
+            <label><input type="checkbox" class="price-filter" value="5000000-10000000"> 5,000,000 - 10,000,000</label>
+            <label><input type="checkbox" class="price-filter" value="10000000-30000000"> 10,000,000 - 30,000,000</label>
+            <label><input type="checkbox" class="price-filter" value="0-30000000"> 0 - 30,000,000</label>
+        </div>
+    </div>
+    
+    <!-- Bộ lọc gia vị -->
+    <div class="filter-section">
+        <div class="filter-title">Gia vị</div>
+        <div class="filter-group">
+            <strong>Loại gia vị:</strong>
+            <label><input type="checkbox" class="filter" value="dầu"> Dầu</label>
+            <label><input type="checkbox" class="filter" value="muối"> Muối</label>
+        </div>
+        <div class="filter-group">
+            <strong>Khoảng giá:</strong>
+            <label><input type="checkbox" class="price-filter" value="0-50000"> 0 - 50,000</label>
+            <label><input type="checkbox" class="price-filter" value="50000-100000"> 50,000 - 100,000</label>
+            <label><input type="checkbox" class="price-filter" value="100000-200000"> 100,000 - 200,000</label>
+            <label><input type="checkbox" class="price-filter" value="200000-500000"> 200,000 - 500,000</label>
+            <label><input type="checkbox" class="price-filter" value="0-500000"> 0 - 500,000</label>
+        </div>
+    </div>
+    
+    <script>
+        document.querySelectorAll('input[type="checkbox"]').forEach(checkbox => {
+            checkbox.addEventListener('change', function () {
+                console.log(`Lọc sản phẩm theo: ${this.value}, Checked: ${this.checked}`);
+            });
+        });
+    </script>
+</body>
+</html>

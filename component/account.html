@@ -4,8 +4,191 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tài khoản</title>
+    <link rel="stylesheet" href="../css/style/user/account.css">
+    <!--Font-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Parkinsans:wght@300..800&display=swap" rel="stylesheet">
 </head>
 <body>
+    <div class="container">
+        <div class="title">
+            <img src="../assets/images/Male User.png" alt="avatar" srcset="">
+            <h2>Xuân Mai</h2>
+        </div>
+
+        <div class="nav-button">
+            <button id="monyeuthich">Món yêu thích</button>
+            <button id="donhang">Đơn hàng</button>
+        </div>
+
+        <div id="setting-content" >
+            <div  class="setting">
+                <h4>Cài đặt tài khoản</h4>
     
+                <div class="grid-container">
+                    <div class="item">
+                        <label for="">Tên</label>
+                        <div class="input-group">
+                            <input type="text" value="Xuân Mai" disabled>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                            <path fill="currentColor" d="M7.243 17.997H3v-4.243L14.435 2.319a1 1 0 0 1 1.414 0l2.829 2.828a1 1 0 0 1 0 1.415zm-4.243 2h18v2H3z"/></svg>
+                        </div>
+                    </div>
+    
+                    <div class="item">
+                        <label for="">Email</label>
+                        <div class="input-group">
+                            <input type="email" value="maine14022021@gmail.com" disabled>
+                            <svg class="edit-btn" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                            <path fill="currentColor" d="M7.243 17.997H3v-4.243L14.435 2.319a1 1 0 0 1 1.414 0l2.829 2.828a1 1 0 0 1 0 1.415zm-4.243 2h18v2H3z"/></svg>
+                        </div>
+                    </div>
+    
+                    
+    
+                    <div class="item">
+                        <label for="">Số điện thoại</label>
+                        <div class="input-group">
+                            <input type="text" value="0354542024" disabled>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                            <path fill="currentColor" d="M7.243 17.997H3v-4.243L14.435 2.319a1 1 0 0 1 1.414 0l2.829 2.828a1 1 0 0 1 0 1.415zm-4.243 2h18v2H3z"/></svg>
+                        </div>
+                    </div>
+    
+                    <div class="item">
+                        <label for="">Tỉnh, thành phố</label>
+                            <select name="" id="">
+                                <option value="TP.HCM">TP.HCM</option>
+                            </select>
+                    </div>
+    
+                    <div class="item">
+                        <label for="">Quận, huyện</label>
+                        <select name="" id="">
+                            <option value="Quận 7">Quận 7</option>
+                        </select>
+                    </div>
+    
+                    <div class="item">
+                        <label for="">Địa chỉ chi tiết</label>
+                        <input type="text" value="Hồ con rùa">
+                    </div>
+                </div>
+    
+                
+            </div>
+            <button class="btn-luu">Lưu</button>
+        </div>
+       
+    </div>
+
+    <!--Chi tiết đơn hàng-->
+
+    <div id="chi-tiet-don-hang-container"  class="chi-tiet-don-hang-container">
+        <!--Mỗi cục là 1 đơn hàng, trong 1 đơn hàng có nhiều sản phẩm-->
+        <div class="donhang-content">
+            <div class="sanpham">
+                <div class="detail-sp">
+                    <img src="../assets/images/ly.webp" alt="hinh-anh-san-pham">
+                    <p>Ly 390ml</p>
+                    <p>Số lượng: 1</p>
+                    <p>300.000</p>
+                </div>
+
+                <div class="detail-sp">
+                    <img src="../assets/images/ly.webp" alt="hinh-anh-san-pham">
+                    <p>Ly 390ml</p>
+                    <p>Số lượng: 1</p>
+                    <p>300.000</p>
+                </div>
+            </div>
+            <div class="thong-tin-don-hang">
+                <p>Tổng tiền: 600.000</p>
+                <p class="tinh-trang-don-hang">Đã hủy</p>
+                <p>Thời gian đặt hàng: 6/3/2025</p>
+                <p>Thời gian nhận hàng: 8/3/2025</p>
+            </div>
+        </div>
+
+        <div class="donhang-content">
+            <div class="sanpham">
+                <div class="detail-sp">
+                    <img src="../assets/images/ly.webp" alt="hinh-anh-san-pham">
+                    <p>Ly 390ml</p>
+                    <p>Số lượng: 1</p>
+                    <p>300.000</p>
+                </div>
+            </div>
+            <div class="thong-tin-don-hang">
+                <p>Tổng tiền: 300.000</p>
+                <p class="tinh-trang-don-hang">Đã hủy</p>
+                <p>Thời gian đặt hàng: 6/3/2025</p>
+                <p>Thời gian nhận hàng: 8/3/2025</p>
+            </div>
+        </div>
+
+        <div class="donhang-content">
+            <div class="sanpham">
+                <div class="detail-sp">
+                    <img src="../assets/images/ly.webp" alt="hinh-anh-san-pham">
+                    <p>Ly 390ml</p>
+                    <p>Số lượng: 1</p>
+                    <p>300.000</p>
+                </div>
+            </div>
+            <div class="thong-tin-don-hang">
+                <p>Tổng tiền: 300.000</p>
+                <p class="tinh-trang-don-hang">Đã hủy</p>
+                <p>Thời gian đặt hàng: 6/3/2025</p>
+                <p>Thời gian nhận hàng: 8/3/2025</p>
+            </div>
+            
+        </div>
+
+        <div class="donhang-content">
+            <div class="sanpham">
+                <div class="detail-sp">
+                    <img src="../assets/images/ly.webp" alt="hinh-anh-san-pham">
+                    <p>Ly 390ml</p>
+                    <p>Số lượng: 1</p>
+                    <p>300.000</p>
+                </div>
+            </div>
+            <div class="thong-tin-don-hang">
+                <p>Tổng tiền: 300.000</p>
+                <p class="tinh-trang-don-hang">Đã hủy</p>
+                <p>Thời gian đặt hàng: 6/3/2025</p>
+                <p>Thời gian nhận hàng: 8/3/2025</p>
+            </div>
+        </div>
+    </div>
+   
+    
+    
+
+
+    <!--script-->
+    <script>
+        const btnDonHang = document.getElementById("donhang");
+        const settingContent = document.getElementById("setting-content");
+        const chiTietDHContainer = document.getElementById("chi-tiet-don-hang-container");
+
+        btnDonHang.addEventListener("click", function() {
+            settingContent.classList.toggle("hidden");
+            if (chiTietDHContainer.style.display === "flex") {
+                chiTietDHContainer.style.display = "none";
+                btnDonHang.style.backgroundColor = "#d9d9d9";    // Ẩn đi nếu đang hiện
+            } else {
+                chiTietDHContainer.style.display = "flex"; 
+                btnDonHang.style.backgroundColor = "#ffd700";   // Hiện lên nếu đang ẩn
+
+              
+            }
+             
+        });
+
+
+    </script>
 </body>
 </html>

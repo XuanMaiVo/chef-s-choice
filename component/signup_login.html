@@ -3,9 +3,63 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Đăng ký, đăng nhậ<p></p></title>
+    <title>Đăng ký, đăng nhập</title>
+    <link rel="stylesheet" href="../css/style/user/signup_login.css">
+    <!--Font-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Parkinsans:wght@300..800&display=swap" rel="stylesheet">
 </head>
 <body>
-    
+    <div class="container" id="container">
+        <div class="form-container dangky-container">
+            <form action="#">
+                <h2>ĐĂNG KÝ TÀI KHOẢN</h2>
+                <input type="email" name="email" id="email" placeholder="Email...">
+                <input type="text" name="phone" id="phone" placeholder="Số điện thoại...">
+                <input type="password" name="password" id="password" placeholder="Mật khẩu...">
+                <p>Đã có tài khoản? <a href="" id="switchToSignUp">Đăng nhập</a></p>
+                <button id="btn_dangky">Đăng Ký</button>
+            </form>
+        </div>
+        <div class="form-container dangnhap-container">
+            <form action="#">
+                <h2>ĐĂNG NHẬP</h2>
+                <input type="email" name="email" id="email" placeholder="Email...">
+                <input type="password" name="password" id="password" placeholder="Mật khẩu...">
+                <p>Chưa có tài khoản? <a href="#" id="switchToSignIn">Đăng ký</a></p>
+                <button id="btn_dangnhap">Đăng Nhập</button>
+            </form>
+        </div>
+        <div class="overlay-container">
+            <div class="overlay">
+                <div class="overlay-panel overlay-right">
+                    <h2>CHÀO MỪNG BẠN ĐẾN VỚI CHEF'S CHOICE</h2>
+                    <p id="p_right">SỰ LỰA CHỌN THÔNG MINH CHO SỨC KHỎE CỦA BẠN VÀ GIA ĐÌNH</p>
+                </div>
+                <div class="overlay-panel overlay-left">
+                    <h2>CHÀO MỪNG BẠN QUAY LẠI VỚI CHEF'S CHOICE</h2>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        const switchToSignUp = document.getElementById('switchToSignUp');
+        const switchToSignIn = document.getElementById('switchToSignIn');
+        const container = document.getElementById('container');
+
+
+        // Khi nhấn vào link "Đăng ký"
+        switchToSignUp.addEventListener('click', (e) => {
+            e.preventDefault();
+            container.classList.add('right-panel-active');
+        });
+
+        // Khi nhấn vào link "Đăng nhập"
+        switchToSignIn.addEventListener('click', (e) => {
+            e.preventDefault();
+            container.classList.remove('right-panel-active');
+        });
+    </script>
 </body>
 </html>

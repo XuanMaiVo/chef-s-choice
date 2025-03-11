@@ -1,0 +1,680 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-align: center;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: white;
+    width: 1206px;
+    height: 297px;
+    border: none;
+}
+
+footer {
+    margin-top: 20px;
+    background-color: #e6b6b6;
+    /* Màu nền hồng nhạt */
+    padding: 20px 0;
+}
+
+.footer-content {
+    display: flex;
+    flex-direction: row;
+    /* Chuyển thành hàng ngang */
+    justify-content: space-between;
+    /* Căn đều khoảng cách giữa các phần tử */
+    align-items: center;
+    max-width: 1200px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 20px;
+    gap: 50px;
+}
+
+.footer-logo,
+.footer-text,
+.social-icons {
+    flex: 1;
+    /* Chia đều không gian giữa các phần tử */
+    display: flex;
+    justify-content: center;
+    /* Căn giữa nội dung trong mỗi phần */
+    align-items: center;
+}
+
+.footer-logo h2 {
+    font-family: "Dancing Script", cursive;
+    font-size: 36px;
+    font-weight: bold;
+    color: white;
+    text-align: center;
+    /* Đổi từ right sang center để không bị lệch */
+}
+
+
+.social-icons {
+    display: flex;
+    gap: 20px;
+    /* Giảm khoảng cách giữa các icon để tránh bị lệch */
+    align-items: center;
+}
+
+.social-icons img {
+    width: 40px;
+    height: 30px;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.social-icons img:hover {
+    transform: scale(1.1);
+}
+
+.logo {
+    display: flex;
+    width: 297px;
+    height: 297px;
+}
+
+.search-bar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    width: 500px;
+    height: 54px;
+    border: 2px solid #c44;
+    border-radius: 5px;
+    padding: 5px;
+    background-color: white;
+}
+
+.search-bar input {
+    flex: 1;
+    padding: 10px;
+    border: none;
+    height: 100%;
+    text-align: center;
+    font-size: 16px;
+    border-radius: 5px 0 0 5px;
+    outline: none;
+}
+
+.search-bar button {
+    background-color: #c44;
+    border: 2px solid black;
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 0 5px 5px 0;
+    color: white;
+    font-weight: bold;
+    font-size: 16px;
+    transition: background-color 0.3s;
+}
+
+.search-bar button:hover {
+    background-color: red;
+}
+
+.register {
+    background-color: red;
+    width: 124px;
+    height: 51px;
+    box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.register:hover {
+    background-color: yellow;
+}
+
+.login {
+    background-color: gray;
+    color: white;
+    width: 124px;
+    height: 51px;
+    box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.login:hover {
+    background-color: red;
+}
+
+.auth-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    /* Đảm bảo khoảng cách đều giữa các phần tử */
+    gap: 10px;
+}
+
+.auth-buttons button {
+    padding: 10px 15px;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    border-radius: 5px;
+    width: 124px;
+    height: 51px;
+}
+
+.register {
+    background-color: red;
+    width: 124px;
+    height: 51px;
+    box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.register:hover {
+    background-color: yellow;
+}
+
+nav {
+    display: flex;
+    justify-content: center;
+    background-color: #f8f8f8;
+    padding: 10px 0;
+}
+
+nav button {
+    margin: 0 10px;
+    padding: 10px;
+    border: none;
+    width: 130px;
+    height: 49px;
+    cursor: pointer;
+    box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.active {
+    background-color: yellow;
+}
+
+.active1 {
+    background-color: red;
+}
+
+.banner img {
+    width: 753.78px;
+    height: 424px;
+}
+
+.item {
+    background-color: #f8d7da;
+    padding: 15px;
+    text-align: center;
+    border-radius: 10px;
+    border: 2px solid #d00000;
+    width: 358px;
+    height: 327px;
+    /* Kích thước chuẩn cho mỗi sản phẩm */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.item1 {
+    background-color: #f8d7da;
+    padding: 15px;
+    text-align: center;
+    border-radius: 10px;
+    border: 2px solid #d00000;
+    width: 253px;
+    height: 184px;
+    /* Kích thước chuẩn cho mỗi sản phẩm */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: transform 0.3s ease-in-out;
+    /* Hiệu ứng mượt */
+}
+
+.item1:hover {
+    transform: scale(1.1);
+    /* Phóng to 10% */
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2);
+    /* Đổ bóng để nổi bật */
+}
+
+.item img {
+    width: 269.3;
+    height: 179.39px;
+    border-radius: 10px;
+}
+
+.item1 img {
+    width: 169.64px;
+    height: 113px;
+    border-radius: 10px;
+}
+
+.item h3 {
+    font-size: 18px;
+    font-weight: bold;
+    color: #333;
+    margin: 10px 0;
+}
+
+.item .buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    width: 100%;
+}
+
+footer {
+    background-color: #c44;
+    color: white;
+    padding: 10px;
+}
+
+.social-icons {
+    display: flex;
+    gap: 10px;
+    width: 76px;
+    height: 82px;
+}
+
+.product {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.detail-btn,
+.save-btn {
+    border: none;
+    display: flex;
+    padding: 8px 12px;
+    margin: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 8px;
+    border-radius: 5px;
+    width: 95px;
+    height: 35px;
+    align-items: center;
+    /* Căn giữa theo chiều dọc */
+    justify-content: center;
+    /* Căn giữa theo chiều ngang */
+
+}
+
+.detail-btn {
+    background-color: yellow;
+
+}
+
+.save-btn {
+    background-color: red;
+
+}
+
+.button-group {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+    gap: 10px;
+
+}
+
+.more-btn {
+    text-align: center;
+    background-color: red;
+    font-size: 15px;
+    width: 153px;
+    height: 51px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+/* Thiết lập nút dropdown */
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-btn {
+    background-color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.dropdown-btn1 {
+    background-color: yellow;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+/* Ẩn menu dropdown ban đầu */
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    background-color: white;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+    border-radius: 5px;
+    list-style-type: none;
+    padding: 0;
+    margin: 5px 0;
+    width: 180px;
+}
+
+.dropdown-menu li {
+    padding: 10px;
+    cursor: pointer;
+}
+
+.dropdown-menu li:hover {
+    background-color: #f1f1f1;
+}
+
+/* Màu nền cho phần tử được highlight */
+.highlight {
+    background-color: #F5E1A4;
+    color: red;
+}
+
+.banner1 {
+    display: flex;
+    width: 100%;
+    height: 300px;
+}
+
+.banner1 img {
+    width: 100%;
+    height: 300px;
+    margin-bottom: 20px;
+    object-fit: cover;
+}
+
+.pagination {
+    display: flex;
+    justify-content: center;
+    background-color: #666;
+    margin-top: 20px;
+    color: white;
+}
+
+.pagination button {
+    margin: 5px;
+    padding: 10px;
+    border: none;
+    background-color: #ccc;
+    color: black;
+    cursor: pointer;
+}
+
+.pagination button.active {
+    background-color: black;
+    color: white;
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-content {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    width: 50%;
+    text-align: center;
+}
+
+.close-btn {
+    float: right;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+.dish-title {
+    font-size: 28px;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 15px;
+    color: #c1272d;
+}
+
+.dish-container {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+
+.dish-image img {
+    margin-left: 10px;
+    display: flex;
+    width: 618px;
+    height: 351px;
+    border-radius: 8px;
+}
+
+.dish-info {
+    flex: 1;
+}
+
+.ingredients-box {
+    display: flex;
+    background: #ffe6e6;
+    padding: 15px;
+    border-radius: 10px;
+    margin-bottom: 15px;
+    width: 540px;
+    height: 344px;
+}
+
+.ingredients-list {
+    list-style-type: disc;
+    padding-left: 20px;
+}
+
+.save-recipe {
+    background-color: #ffcc00;
+    border: none;
+    padding: 10px 15px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    width: 100%;
+    border-radius: 5px;
+}
+
+.steps-box {
+    margin-top: 20px;
+}
+
+.steps p {
+    background: #fff5e6;
+    padding: 10px;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+.completion-text {
+    font-weight: bold;
+    text-align: center;
+    color: #c1272d;
+    margin-top: 20px;
+}
+
+.highlight {
+    color: #ff6600;
+}
+
+.filter {
+    background-color: white;
+    display: flex;
+    justify-content: space-between;
+    /* Căn chỉnh các nút sang hai bên trái và phải */
+    width: 100%;
+    gap: 20px;
+    align-items: center;
+    margin-bottom: 20px;
+
+}
+
+.filter button {
+    padding: 10px 15px;
+    border: 1px solid black;
+    border-radius: 5px;
+    background-color: white;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s;
+    box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.filter button:hover {
+    background-color: #f1f1f1;
+}
+
+.filter .active1 {
+    background-color: #c44;
+    color: white;
+}
+
+.filter .active1:hover {
+    background-color: #a33;
+}
+
+/* Nút bộ lọc nằm bên phải */
+.filter .filter-btn {
+    background-color: white;
+    color: gray;
+    border: 1px solid black;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.filter .filter-btn:hover {
+    background-color: yellow;
+}
+
+.filter-dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.filter-menu {
+    display: none;
+    position: absolute;
+    top: 40px;
+    left: 0;
+    background: white;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+    border-radius: 5px;
+    overflow: hidden;
+    width: 160px;
+}
+
+.filter-menu ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.filter-menu li {
+    padding: 10px;
+    cursor: pointer;
+    font-size: 14px;
+    border-bottom: 1px solid #eee;
+}
+
+.filter-menu li:first-child {
+    background: #c00;
+    color: white;
+    font-weight: bold;
+}
+
+.filter-menu li:hover {
+    background: #ddd;
+}
+
+/* Nút danh mục */
+.left-buttons button {
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+    margin-right: 10px;
+    border-radius: 5px;
+}
+
+.left-buttons .active1 {
+    background: #c00;
+    color: white;
+}
+
+.recipe-container {
+    margin-top: 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.recipe-image {
+    flex: 1;
+    padding-right: 20px;
+}
+
+.recipe-image img {
+    max-width: 100%;
+    border-radius: 10px;
+}
+
+.ingredients {
+    flex: 1;
+    background: #f8f8f8;
+    padding: 20px;
+    border-radius: 10px;
+    margin-top: 10px;
+}
+
+.ingredients ul {
+    list-style-position: inside;
+    padding-left: 0;
+}
+
+.instructions {
+    margin-top: 20px;
+    background: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}

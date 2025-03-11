@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Đăng ký, đăng nhập</title>
     <link rel="stylesheet" href="../css/style/user/signup_login.css">
+    <link rel="stylesheet" href="../icons/style-icon.css">
     <!--Font-->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -15,9 +16,22 @@
         <div class="form-container dangky-container">
             <form action="#">
                 <h2>ĐĂNG KÝ TÀI KHOẢN</h2>
-                <input type="email" name="email" id="email" placeholder="Email...">
-                <input type="text" name="phone" id="phone" placeholder="Số điện thoại...">
-                <input type="password" name="password" id="password" placeholder="Mật khẩu...">
+                <input type="text" name="usernam" id="usernameDK" placeholder="Tên người dùng..." required
+                pattern="^[a-zA-Z_ÀÁÂÃÈÉÊẾÌÍÒÓÔÕÙÚĂĐĨŨƠàáâãèéêếìíòóôõùúăđĩũơƯĂẠẢẤẦẨẪẬẮẰẲẴẶẸẺẼỀỀỂưăạảấầẩẫậắằẳẵặẹẻẽềềểỄỆỈỊỌỎỐỒỔỖỘỚỜỞỠỢỤỦỨỪễệỉịọỏốồổỗộớờởỡợụủứừỬỮỰỲỴÝỶỸửữựỳỵỷỹ ]{2,255}$"
+                title="Tên gồm 2 - 255 ký tự chữ cái và khoảng trắng">
+                <input type="email" name="email" id="emailDK" placeholder="Email..." required
+                title="Email không hợp lệ. VD: manh.le@gmail.com">
+                <input type="text" name="phone" id="phoneDK" placeholder="Số điện thoại..." required
+                pattern="^0[0-9]{9}$|^[+][0-9]{2}[0-9]{8}$"
+                title="Phone chỉ chứa 10 ký tự số">
+                <div class="password-container">
+                    <input type="password" name="password" id="passwordDK" placeholder="Mật khẩu..." required 
+                    pattern="^[a-zA-Z0-9]{6,20}$"
+                    title="Password gồm 6-20 ký tự số và chữ cái">
+                    <span id="close-eye" class="streamline--invisible-2"></span>
+                    <span class="hugeicons--eye" id="open-eye"></span>
+                </div>
+
                 <p>Đã có tài khoản? <a href="" id="switchToSignUp">Đăng nhập</a></p>
                 <button id="btn_dangky">Đăng Ký</button>
             </form>
@@ -25,8 +39,8 @@
         <div class="form-container dangnhap-container">
             <form action="#">
                 <h2>ĐĂNG NHẬP</h2>
-                <input type="email" name="email" id="email" placeholder="Email...">
-                <input type="password" name="password" id="password" placeholder="Mật khẩu...">
+                <input type="email" name="email" id="emailDN" placeholder="Email...">
+                <input type="password" name="password" id="passwordDN" placeholder="Mật khẩu...">
                 <p>Chưa có tài khoản? <a href="#" id="switchToSignIn">Đăng ký</a></p>
                 <button id="btn_dangnhap">Đăng Nhập</button>
             </form>
@@ -43,23 +57,8 @@
             </div>
         </div>
     </div>
-    <script>
-        const switchToSignUp = document.getElementById('switchToSignUp');
-        const switchToSignIn = document.getElementById('switchToSignIn');
-        const container = document.getElementById('container');
-
-
-        // Khi nhấn vào link "Đăng ký"
-        switchToSignUp.addEventListener('click', (e) => {
-            e.preventDefault();
-            container.classList.add('right-panel-active');
-        });
-
-        // Khi nhấn vào link "Đăng nhập"
-        switchToSignIn.addEventListener('click', (e) => {
-            e.preventDefault();
-            container.classList.remove('right-panel-active');
-        });
+    <script src="../js/signup_login_script.js">
+        
     </script>
 </body>
 </html>

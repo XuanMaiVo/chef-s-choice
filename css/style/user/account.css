@@ -29,6 +29,7 @@ body {
     display: flex;
     flex-direction: row;
     align-items: center;
+    cursor: pointer;
 }
 .nav-button{
     display: flex;
@@ -77,16 +78,6 @@ input, select {
     
 }
 
-.item svg{
-    height: 40px;
-    width: 40px;
-    cursor: pointer;
-    color: var(--red-color);
-}
-.edit-btn:active{
-    transform: scale(0.95);
-}
-
 .btn-luu{
     background-color: var(--red-color);
     padding: 20px;
@@ -126,9 +117,19 @@ input, select {
     cursor: pointer;
     letter-spacing: 1px;
 }
+
+#monyeuthich:hover{
+    background-color: #ccc;
+}
+
 #monyeuthich:active{
     transform: scale(0.95);
 }
+
+#donhang:hover{
+    background-color: #ccc;
+}
+
 #donhang:active{
     transform: scale(0.95);
 }

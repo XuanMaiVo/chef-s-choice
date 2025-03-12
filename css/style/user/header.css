@@ -1,0 +1,137 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background: #FAFAFA;
+    text-align: center;
+}
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 50px;
+    background: white;
+    height: 270px;
+}
+
+.logo img {
+    width: 279px;
+    height: 297px;
+}
+
+.search-bar {
+    display: flex;
+    border: 2px solid #B71C1C;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.search-bar input {
+    padding: 10px;
+    font-size: 18px;
+    border: none;
+    outline: none;
+    width: 501px;
+    height: 54px;
+}
+
+.search-bar button {
+    background: #B71C1C;
+    border: none;
+    padding: 15px;
+    cursor: pointer;
+}
+
+.user-cart-container {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.user-dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.user-icon {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    background-color: white;
+    padding: 10px;
+    border-radius: 50px;
+    cursor: pointer;
+}
+
+.user-icon img {
+    width: 60px;
+    height: 65px;
+}
+
+.dropdown-menu {
+    position: absolute;
+    top: 40px;
+    right: 0;
+    background-color: #fffcf1;
+    border-radius: 6px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+    padding: 10px;
+    width: 180px;
+    display: none;
+}
+
+.dropdown-menu a {
+    margin: 0;
+    font-weight: bold;
+    padding: 6px;
+    text-decoration: none;
+    color: black;
+}
+
+.dropdown-menu a:hover {
+    color: red;
+    text-decoration: underline;
+}
+
+.dropdown-menu hr {
+    margin: 8px 0;
+    border: none;
+    height: 1px;
+    background-color: #ddd;
+}
+
+.dropdown-menu .logout {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+    padding: 8px;
+}
+
+.dropdown-menu .logout img {
+    width: 30px;
+    height: 30px;
+    background-color: white;
+    padding: 5px;
+    border-radius: 5px;
+}
+
+.user-dropdown.open .dropdown-menu {
+    display: block;
+}
+
+.cart-icon {
+    position: relative;
+    cursor: pointer;
+}
+
+.cart-icon img {
+    width: 63px;
+    height: 57px;
+}

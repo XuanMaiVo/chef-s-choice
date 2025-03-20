@@ -1,0 +1,53 @@
+:root{
+    --red-color: #b71c1c;
+    --yellow-color: #ffd700;
+    --yellow-color-2: rgba(255,215,0,0.15);
+
+}
+*{
+    box-sizing: border-box;
+}
+html, body, button, table {
+    font-family: 'Montserrat';
+
+}
+.container {
+    padding: 15px;
+}
+.tim-kiem-box{
+    width: 539px;
+    background-color: var(--yellow-color);
+    display: flex;
+    flex-direction: row;
+    margin: 15px;
+    border-radius: 9px;
+    border: 1px solid #000000;
+}
+input#timkiem-input {
+    width: 100%;
+    border: 1px #ccc solid;
+    border-radius: 9px 0 0 9px;
+    font-size: 1em;
+}
+
+#btn-timkiem {
+    width: 48px;
+    height: 48px;
+    margin: 7px;
+    cursor: pointer;
+}
+
+table {
+    border-collapse: collapse;
+}
+th, td {
+    border: 1px solid black;
+    padding: 10px;
+    text-align: left;
+}
+th {
+    background-color: var(--yellow-color);
+}
+td {
+    background-color: var(--yellow-color-2);
+}

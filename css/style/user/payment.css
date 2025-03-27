@@ -1,0 +1,96 @@
+.payment-header{
+    width: 100%;
+    display:flex;
+    justify-content: flex-start;
+}
+.payment-header img{
+    width:199px;
+    height:auto;
+}
+.payment-content{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+}
+.left-payment{
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    padding:0px 50px 0px 100px;
+    
+}
+.payment-info{
+    text-transform: uppercase;
+    padding:5px;
+}
+.right-payment{
+    width:60%;
+    display:flex;
+    flex-direction: column;
+    padding: 0px 100px 0px 50px
+    
+}
+.payment-items{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    height: 200px ;
+    max-height: 200px;
+    overflow-y: auto;
+}
+.payment-item{
+    width:100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.p-item-product{
+    display:flex;
+    align-items: center;
+}
+.p-item-product-img{
+    width:85px;
+}
+.payment-cost-transfer,
+.payment-total-price{
+    width:100%;
+    display: flex;
+    justify-content: space-between;
+    font-weight: 700;
+    font-size: 16px;
+    box-sizing: border-box;
+}
+.payment-btn-group{
+    width:100%;
+    display: flex;
+    align-items: stretch;
+}
+.payment-return-btn-group{
+    width:75%;
+    display: flex;
+    flex-direction: column;
+}
+.p-return-home-btn,
+.p-return-cart-btn{
+    width:50%;
+    border:none;
+    background:none;
+    text-align: start;
+    text-transform: uppercase;
+    color:#b71c1c;
+    font-weight: 700;
+    padding:5px;
+    cursor:pointer;
+    
+}
+.payment-continue-btn{
+    border:none;
+    border-radius:10px;
+    background-color: #ffd700;
+    padding:5px 15px;
+    text-transform: uppercase;
+    font-weight: 700;
+    cursor:pointer;
+}

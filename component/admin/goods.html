@@ -8,120 +8,7 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
       rel="stylesheet"
     />
-    <style>
-        body{
-            margin:0;
-            padding:0;
-            display:flex;
-            justify-content: center;
-            align-items: start;
-            width: 100%;
-            height:100vh;
-        }
-        ul,li{
-            margin:0;
-            padding:0;
-        }
-        .sidebar{
-            width: 21%;
-            height:100%;
-            background-color: #ffd700;
-            border: none;
-            display: flex;
-            flex-direction: column;
-            justify-content: flex-start;
-            align-items: start;
-        }
-        .goods-accounts{
-            width: 100%;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
-        .menu-dashboard ul{
-            list-style-type: none;
-            width: 100%;
-            
-        }
-        .menu-dashboard li{
-            width: 100%;
-            text-align: start;
-            padding:15px;
-            margin:10px;
-        }
-        .goods-content{
-            width:79%;
-            max-height: 100vh;
-            overflow-y: auto;
-            display:flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            align-items: center;
-        }
-        .goods-title{
-            width: 100%;
-            padding:5px 50px;
-            text-align: start;
-            text-transform: uppercase;
-        }
-        .goods-actions{
-            width: 100%;
-            padding: 10px 75px 10px 75px;
-            display: flex;
-            justify-content: space-between;
-            margin-bottom: 30px;
-        }
-        .order-wrapper{
-            width: 100%;
-            display: flex;
-            flex-wrap: wrap;
-            max-height: 500px;
-            overflow-y: auto;
-        }
-        .order-attributes,
-        .order-items{
-            width: 100%;
-            display: flex;
-            justify-content: center;
-            align-items: stretch;
-            gap:20px;
-            padding:10px 50px;
-        }
-        .order-list{
-            width: 100%;
-            display: flex;
-            flex-wrap: wrap;
-            
-        }
-        .order-attributes-item,
-        .order-item{
-            border:1px solid #000;
-            padding:15px;
-        }
-        .order-id{
-            width:10%;
-            max-width: 10%;
-            text-align: center;
-        }
-        .customer-name{
-            width: 30%;
-            max-width:30% ;
-            text-align: center;
-        }
-        .customer-address{
-            width: 40%;
-            max-width: 40%;
-            text-align: center;
-        }
-        .order-status{
-            width: 20%;
-            max-width: 20%;
-            text-align: center;
-            padding:15px 0px;
-        }
-        
-        
-    </style>
+    <link href="/chef-s-choice/css/style/admin/goods.css" rel="stylesheet" />
 </head>
 <body>
     <aside class="sidebar">
@@ -148,11 +35,23 @@
                     <i class="fas fa-search"></i>
                 </button> 
             </div>
-            <button class="goods-sort">
+            <!-- <button class="goods-sort">
                 <i class="fas fa-sort"></i>
                 &nbsp;
                 Sắp xếp
-            </button>
+            </button> -->
+            <select class="goods-sort">
+                <option value="">
+                    <i class="fas fa-sort"></i>
+                    &nbsp;
+                    Sắp xếp
+                </option>
+                <option value="id">Sắp xếp theo ID</option>
+                <option value="name">Sắp xếp theo Tên</option>
+                <option value="address">Sắp xếp theo Địa chỉ</option>
+                <option value="status">Sắp xếp theo Trạng thái</option>
+            </select>
+            
         </div>
         <div class="order-wrapper">
             <div class="order-attributes">
@@ -199,5 +98,7 @@
             </div>
         </div>
     </div>
+    <script src="/chef-s-choice/js/goods.js"></script>
 </body>
+
 </html>

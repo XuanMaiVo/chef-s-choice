@@ -8,7 +8,7 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
       rel="stylesheet"
     />
-    <link href="/chef-s-choice/css/style/admin/goods.css" rel="stylesheet" />
+    <link href="/chef%27schoice/chef-s-choice/css/style/admin/goods.css" rel="stylesheet" />
 </head>
 <body>
     <aside class="sidebar">
@@ -98,7 +98,7 @@
             </div>
         </div>
     </div>
-    <script src="/chef-s-choice/js/goods.js"></script>
+    <script src="/chef%27schoice/chef-s-choice/js/goods.js"></script>
 </body>
 
 </html>

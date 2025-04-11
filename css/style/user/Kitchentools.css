@@ -177,6 +177,8 @@ button:hover {
     display: none;
     position: absolute;
     width: 220px;
+    bottom: 132%; 
+    left: 85%;
     z-index: 1000;  
 }
 .sort-container button{

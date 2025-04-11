@@ -4,8 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Quản lý Sản phẩm</title>
-    <link rel="stylesheet" href="../../css/style/admin/sidebar.css">
-    <script src="../../js/sidebar.js"></script>
+    <link rel="stylesheet" href="/css/style/admin/sidebar.css">
+    <script src="/js/sidebar.js"></script>
 
 </head>
 <body>

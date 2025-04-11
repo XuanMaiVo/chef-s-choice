@@ -14,15 +14,19 @@
 
 <body>
     <header>
-        <div class="logo"><img src="../../assets/images/chef's_choice_logo.png" alt="Chef's Choice"></div> <!-- Sửa đường dẫn hình ảnh -->
+        <div class="logo"><img src="../../assets/images/chef's_choice_logo.png" alt="Chef's Choice"></div>
+        <!-- Sửa đường dẫn hình ảnh -->
         <div class="search-bar">
             <input type="text" placeholder="TÌM KIẾM SẢN PHẨM...">
             <button>🔍</button>
         </div>
-        <div class="auth-buttons">
-            <button class="register">ĐĂNG KÍ</button>
-            <button class="login">ĐĂNG NHẬP</button>
-            <button class="cart-button"></button>
+        <div class="button-container">
+            <button class="btn-register">ĐĂNG KÍ</button>
+            <button class="btn-login">ĐĂNG NHẬP</button>
+            <button class="cart-button">
+                <img src="../../assets/images/cart.png" alt="Giỏ hàng">
+            </button>
+
         </div>
     </header>
     <nav>
@@ -46,19 +50,23 @@
         <h2>MÓN NGON XU HƯỚNG</h2>
         <div class="product">
             <div class="item1">
-                <img src="../../assets/images/banhxeomientrung.png" alt="Bánh xèo miền Trung"> <!-- Sửa đường dẫn hình ảnh -->
+                <img src="../../assets/images/banhxeomientrung.png" alt="Bánh xèo miền Trung">
+                <!-- Sửa đường dẫn hình ảnh -->
                 <h3>Bánh xèo miền Trung</h3>
             </div>
             <div class="item1">
-                <img src="../../assets/images/banhxeomientrung.png" alt="Bánh xèo miền Trung"> <!-- Sửa đường dẫn hình ảnh -->
+                <img src="../../assets/images/banhxeomientrung.png" alt="Bánh xèo miền Trung">
+                <!-- Sửa đường dẫn hình ảnh -->
                 <h3>Bánh xèo miền Trung</h3>
             </div>
             <div class="item1">
-                <img src="../../assets/images/banhxeomientrung.png" alt="Bánh xèo miền Trung"> <!-- Sửa đường dẫn hình ảnh -->
+                <img src="../../assets/images/banhxeomientrung.png" alt="Bánh xèo miền Trung">
+                <!-- Sửa đường dẫn hình ảnh -->
                 <h3>Bánh xèo miền Trung</h3>
             </div>
             <div class="item1">
-                <img src="../../assets/images/banhxeomientrung.png" alt="Bánh xèo miền Trung"> <!-- Sửa đường dẫn hình ảnh -->
+                <img src="../../assets/images/banhxeomientrung.png" alt="Bánh xèo miền Trung">
+                <!-- Sửa đường dẫn hình ảnh -->
                 <h3>Bánh xèo miền Trung</h3>
             </div>
         </div>
@@ -68,7 +76,8 @@
         <h2>MÓN MỚI RA LÒ</h2>
         <div class="product">
             <div class="item">
-                <img src="../../assets/images/banhxeomientrung.png" alt="Bánh xèo miền Trung"> <!-- Sửa đường dẫn hình ảnh -->
+                <img src="../../assets/images/banhxeomientrung.png" alt="Bánh xèo miền Trung">
+                <!-- Sửa đường dẫn hình ảnh -->
                 <h3>Bánh xèo miền Trung</h3>
                 <div class="button-group">
                     <button class="detail-btn">XEM CHI TIẾT</button>
@@ -76,7 +85,8 @@
                 </div>
             </div>
             <div class="item">
-                <img src="../../assets/images/banhxeomientrung.png" alt="Bánh xèo miền Trung"> <!-- Sửa đường dẫn hình ảnh -->
+                <img src="../../assets/images/banhxeomientrung.png" alt="Bánh xèo miền Trung">
+                <!-- Sửa đường dẫn hình ảnh -->
                 <h3>Bánh xèo miền Trung</h3>
                 <div class="button-group">
                     <button class="detail-btn">XEM CHI TIẾT</button>
@@ -84,7 +94,8 @@
                 </div>
             </div>
             <div class="item">
-                <img src="../../assets/images/banhxeomientrung.png" alt="Bánh xèo miền Trung"> <!-- Sửa đường dẫn hình ảnh -->
+                <img src="../../assets/images/banhxeomientrung.png" alt="Bánh xèo miền Trung">
+                <!-- Sửa đường dẫn hình ảnh -->
                 <h3>Bánh xèo miền Trung</h3>
                 <div class="button-group">
                     <button class="detail-btn">XEM CHI TIẾT</button>

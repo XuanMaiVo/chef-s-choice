@@ -4,16 +4,20 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Kitchen Tools</title>
-    <link rel="stylesheet" href="../css/style/user/Spicesyouneed.css">
+    <link rel="stylesheet" href="/css/style/user/Spicesyouneed.css">
 
 </head>
 <body>
-
+    <?php
+        include("header.php");
+        include("banner.php");
+        include("navbar.php");
+    ?>
     <section class="products">
         <h2>GIA VỊ BẠN CẦN</h2>
         <div class="buttons">
             <button id="openFilter" class="filter-btn">
-                <img src="../assets/images/filter-6553.png" alt="Bộ lọc"> BỘ LỌC
+                <img src="/assets/images/filter-6553.png" alt="Bộ lọc"> BỘ LỌC
             </button>
             <div id="filterBox" class="filter-container">
                 <h3>LOẠI SẢN PHẨM</h3>
@@ -38,13 +42,13 @@
             </div>
     
             <button id="sortToggle" class="sort-btn">
-                <img src="../assets/images/up-and-down-black-outline-circle-arrows-20701.png" alt="Sắp xếp"> SẮP XẾP
+                <img src="/assets/images/up-and-down-black-outline-circle-arrows-20701.png" alt="Sắp xếp"> SẮP XẾP
             </button>
             
             <div id="sortOptions" class="sort-container ">
-                <button onclick="sortProducts('asc')">Sắp xếp giá tăng dần <img src="../assets/images/prime--sort-amount-up.png"></button>
-                <button onclick="sortProducts('desc')">Sắp xếp giá giảm dần <img src="../assets/images/prime--sort-amount-down.png"></button>
-            </div>            
+                <button onclick="sortProducts('asc')">Sắp xếp giá tăng dần <img src="/assets/images/prime--sort-amount-up.png"></button>
+                <button onclick="sortProducts('desc')">Sắp xếp giá giảm dần <img src="/assets/images/prime--sort-amount-down.png"></button>
+            </div>
         </div>
 
         <div class="product-container">
@@ -89,8 +93,9 @@
             <button id="nextPage">&raquo;</button>
         </div>
     </section>
-
- 
-    <script src="../js/Spicesyouneed.js"></script>
+    <script src="/js/Spicesyouneed.js"></script>
+    <?php
+    include("footer.php");     
+    ?>
 </body>
 </html>

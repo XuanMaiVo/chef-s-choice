@@ -176,7 +176,7 @@ button:hover {
     box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
     display: none;
     position: absolute;
-    top: 132%; 
+    bottom: 132%; 
     left: 85%;
     width: 220px;
     z-index: 1000;  

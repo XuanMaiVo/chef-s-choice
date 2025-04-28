@@ -9,15 +9,15 @@
 </head>
 <body>
     <?php
-        include("header.php");
-        include("banner.php");
-        include("navbar.php");
-    ?>
+            include("../../component/user/header.php");  
+            include("../../component/user/banner.php");  
+            include("../../component/user/navbar.php");  
+        ?>
     <section class="products">
         <h2>DỤNG CỤ NHÀ BẾP</h2>
         <div class="buttons">
             <button id="openFilter" class="filter-btn">
-                <img src="/assets/images/filter-6553.png" alt="Bộ lọc"> BỘ LỌC
+                <img src="../../assets/images/filter-6553.png" alt="Bộ lọc"> BỘ LỌC
             </button>
         <div id="overlay" style="display:none;"></div>
         <div id="filterBox" class="filter-container">
@@ -47,12 +47,12 @@
             </div>
     
             <button id="sortToggle" class="sort-btn">
-                <img src="/assets/images/up-and-down-black-outline-circle-arrows-20701.png" alt="Sắp xếp"> SẮP XẾP
+                <img src="../../assets/images/up-and-down-black-outline-circle-arrows-20701.png" alt="Sắp xếp"> SẮP XẾP
             </button>
             
             <div id="sortOptions" class="sort-container">
-                <button data-sort="asc">Sắp xếp giá tăng dần <img src="/assets/images/prime--sort-amount-up.png"></button>
-                <button data-sort="desc">Sắp xếp giá giảm dần <img src="/assets/images/prime--sort-amount-down.png"></button>
+                <button data-sort="asc">Sắp xếp giá tăng dần <img src="../../assets/images/prime--sort-amount-up.png"></button>
+                <button data-sort="desc">Sắp xếp giá giảm dần <img src="../../assets/images/prime--sort-amount-down.png"></button>
             </div>
         </div>
 
@@ -68,13 +68,13 @@
                     while ($row = mysqli_fetch_assoc($result)) {
                         echo '<div class="product-item">';
                         echo '    <button class="openModalBtn" ';
-                        echo '            data-img="/assets/images/' . htmlspecialchars($row['hinhanh']) . '" ';
+                        echo '            data-img="../../assets/images/' . htmlspecialchars($row['hinhanh']) . '" ';
                         echo '            data-name="' . htmlspecialchars($row['tenSP']) . '" ';
                         echo '            data-price="' . number_format($row['gia'], 0, ",", ".") . 'đ" ';
                         echo '            data-mota="' . htmlspecialchars($row['mota']) . '" ';
                         echo '            data-soluong="' . htmlspecialchars($row['soluong']) . '" ';
                         echo '            data-masp="' . htmlspecialchars($row['maSP']) . '" >';
-                        echo '        <img src="/assets/images/' . htmlspecialchars($row['hinhanh']) . '" alt="' . htmlspecialchars($row['tenSP']) . '">';
+                        echo '        <img src="../../assets/images/' . htmlspecialchars($row['hinhanh']) . '" alt="' . htmlspecialchars($row['tenSP']) . '">';
                         echo '    </button>';
                         echo '    <p>' . htmlspecialchars($row['tenSP']) . '</p>';
                         echo '    <span>' . number_format($row['gia'], 0, ",", ".") . 'đ</span>';
@@ -126,9 +126,9 @@
             <button id="nextPage">&raquo;</button>
         </div>
     </section>
-    <script src="/js/Kitchentools.js"></script>
+    <script src="../../js/Kitchentools.js"></script>
     <?php
-    include("footer.php");     
+    include("../../component/user/footer.php");     
     ?>
 </body>
 </html>

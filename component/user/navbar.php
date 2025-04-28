@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Navbar</title>
-    <link rel="stylesheet" href="/css/style/user/navbar.css">
+    <link rel="stylesheet" href="../../css/style/user/navbar.css">
 </head>
 <body>
 
@@ -17,6 +17,6 @@
         </ul>
     </nav>
 
-<script src="/js/navbar.js"></script>
+<script src="../../js/navbar.js"></script>
 </body>
 </html>

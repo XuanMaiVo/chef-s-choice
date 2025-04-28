@@ -4,14 +4,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>GIA VỊ BẠN CẦN</title>
-    <link rel="stylesheet" href="../../css/style/user/Spicesyouneed.css">
+    <link rel="stylesheet" href="/css/style/user/Spicesyouneed.css">
 
 </head>
 <body>
     <?php
-        include("header.php");
-        include("banner.php");
-        include("navbar.php");
+        include("../../component/user/header.php");
+        include("../../component/user/banner.php");
+        include("../../component/user/navbar.php");
+        include("../../component/user/footer.php");
     ?>
     <section class="products">
         <h2>GIA VỊ BẠN CẦN</h2>
@@ -46,12 +47,12 @@
             </div>
     
             <button id="sortToggle" class="sort-btn">
-                <img src="/assets/images/up-and-down-black-outline-circle-arrows-20701.png" alt="Sắp xếp"> SẮP XẾP
+                <img src="../../assets/images/up-and-down-black-outline-circle-arrows-20701.png" alt="Sắp xếp"> SẮP XẾP
             </button>
             
             <div id="sortOptions" class="sort-container">
-                <button data-sort="asc">Sắp xếp giá tăng dần <img src="/assets/images/prime--sort-amount-up.png"></button>
-                <button data-sort="desc">Sắp xếp giá giảm dần <img src="/assets/images/prime--sort-amount-down.png"></button>
+                <button data-sort="asc">Sắp xếp giá tăng dần <img src="../../assets/images/prime--sort-amount-up.png"></button>
+                <button data-sort="desc">Sắp xếp giá giảm dần <img src="../../assets/images/prime--sort-amount-down.png"></button>
             </div>
 
         </div>
@@ -68,13 +69,13 @@
                     while ($row = mysqli_fetch_assoc($result)) {
                         echo '<div class="product-item">';
                         echo '    <button class="openModalBtn" ';
-                        echo '            data-img="/assets/images/' . htmlspecialchars($row['hinhanh']) . '" ';
+                        echo '            data-img="../../assets/images/' . htmlspecialchars($row['hinhanh']) . '" ';
                         echo '            data-name="' . htmlspecialchars($row['tenSP']) . '" ';
                         echo '            data-price="' . number_format($row['gia'], 0, ",", ".") . 'đ" ';
                         echo '            data-mota="' . htmlspecialchars($row['mota']) . '" ';
                         echo '            data-soluong="' . htmlspecialchars($row['soluong']) . '" ';
                         echo '            data-masp="' . htmlspecialchars($row['maSP']) . '" >';
-                        echo '        <img src="/assets/images/' . htmlspecialchars($row['hinhanh']) . '" alt="' . htmlspecialchars($row['tenSP']) . '">';
+                        echo '        <img src="../../assets/images/' . htmlspecialchars($row['hinhanh']) . '" alt="' . htmlspecialchars($row['tenSP']) . '">';
                         echo '    </button>';
                         echo '    <p>' . htmlspecialchars($row['tenSP']) . '</p>';
                         echo '    <span>' . number_format($row['gia'], 0, ",", ".") . 'đ</span>';
@@ -127,8 +128,6 @@
         </div>
     </section>
     <script src="../../js/Spicesyouneed.js"></script>
-    <?php
-    include("footer.php");     
-    ?>
+   
 </body>
 </html>

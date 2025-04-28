@@ -71,7 +71,7 @@ document.addEventListener("DOMContentLoaded", function () {
         data.append('prices', JSON.stringify(selectedPrices));
         if (sortOrder) data.append('sort', sortOrder);
 
-        fetch('/php/filter_spices.php', {
+        fetch('../../php/filter_spices.php', {
             method: 'POST',
             body: data
         })

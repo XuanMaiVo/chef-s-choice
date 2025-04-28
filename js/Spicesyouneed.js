@@ -1,146 +1,181 @@
 document.addEventListener("DOMContentLoaded", function () {
-    const openFilter = document.getElementById("openFilter");
-    const closeFilter = document.getElementById("closeFilter");
-    const filterBox = document.getElementById("filterBox");
-    const filterBtn = document.getElementById("openFilter");
-
-    openFilter.addEventListener("click", function () {
-        filterBox.classList.add("show");
-        filterBtn.classList.toggle("active");
-    });
-
-    closeFilter.addEventListener("click", function () {
-        filterBox.classList.remove("show");
-        filterBtn.classList.remove("active"); 
-
-    });
-    
-});
-
-document.addEventListener("DOMContentLoaded", function () {
-    const sortToggle = document.getElementById("sortToggle");
-    const sortOptions = document.getElementById("sortOptions");
-    const sortBtn = document.getElementById("sortToggle");
-
-
-    if (sortToggle && sortOptions) {
-        sortToggle.addEventListener("click", function (event) {
-            event.stopPropagation(); 
-            sortBtn.classList.toggle("active");
-            sortOptions.classList.toggle("show"); 
-        });
-
-        document.addEventListener("click", function (event) {
-            if (!sortOptions.contains(event.target) && !sortToggle.contains(event.target)) {
-                sortBtn.classList.remove("active");
-                sortOptions.classList.remove("show");
-            }
-        });
-    } else {
-        console.error("Không tìm thấy phần tử sortToggle hoặc sortOptions");
-    }
-});
-
-document.addEventListener("DOMContentLoaded", function () {
-    const sortButton = document.getElementById("sortToggle");
-    const sortOptions = document.getElementById("sortOptions");
-
-    // Luôn đặt sortOptions ngay dưới nút sortToggle
-    function positionSortOptions() {
-        const rect = sortButton.getBoundingClientRect();
-        sortOptions.style.top = `${rect.bottom +  window.scrollY+20}px`; 
-        sortOptions.style.left = `${rect.left-50}px`; 
-    }
-
-    // Gọi khi load trang
-    positionSortOptions();
-
-    // Đảm bảo vị trí đúng khi resize màn hình
-    window.addEventListener("resize", positionSortOptions);
-});
-
-document.addEventListener("DOMContentLoaded", function () {
-    const products = [
-        { id: 1, name: "Màu dầu điều", price: "200.000đ", img: "/assets/images/mau_dau_dieu.png" },
-        { id: 2, name: "Sản phẩm 2", price: "350.000đ", img: " /assets/images/mau_dau_dieu.png" },
-        { id: 3, name: "Sản phẩm 3", price: "500.000đ", img: " /assets/images/mau_dau_dieu.png" },
-        { id: 4, name: "Sản phẩm 4", price: "150.000đ", img: " /assets/images/mau_dau_dieu.png" },
-        { id: 5, name: "Sản phẩm 5", price: "180.000đ", img: " /assets/images/mau_dau_dieu.png" },
-        { id: 6, name: "Sản phẩm 6", price: "230.000đ", img: " /assets/images/mau_dau_dieu.png" },
-        { id: 7, name: "Sản phẩm 7", price: "400.000đ", img: " /assets/images/mau_dau_dieu.png" },
-        { id: 8, name: "Sản phẩm 8", price: "220.000đ", img: " /assets/images/mau_dau_dieu.png" },
-        { id: 9, name: "Sản phẩm 9", price: "200.000đ", img: " /assets/images/mau_dau_dieu.png" },
-        { id: 10, name: "Sản phẩm 10", price: "350.000đ", img: " /assets/images/mau_dau_dieu.png" },
-        { id: 11, name: "Sản phẩm 11", price: "500.000đ", img: " /assets/images/mau_dau_dieu.png" },
-        { id: 12, name: "Sản phẩm 12", price: "150.000đ", img: " /assets/images/mau_dau_dieu.png" },
-        { id: 13, name: "Sản phẩm 13", price: "180.000đ", img: " /assets/images/mau_dau_dieu.png" },
-        { id: 14, name: "Sản phẩm 14", price: "230.000đ", img: " /assets/images/mau_dau_dieu.png" },
-        { id: 15, name: "Sản phẩm 15", price: "400.000đ", img: " /assets/images/mau_dau_dieu.png" },
-        { id: 16, name: "Sản phẩm 16", price: "220.000đ", img: " /assets/images/mau_dau_dieu.png" },
-        { id: 1, name: "Màu dầu điều", price: "200.000đ", img: " /assets/images/mau_dau_dieu.png" },
-        { id: 2, name: "Sản phẩm 2", price: "350.000đ", img: " /assets/images/mau_dau_dieu.png" },
-        { id: 3, name: "Sản phẩm 3", price: "500.000đ", img: " /assets/images/mau_dau_dieu.png" },
-        { id: 4, name: "Sản phẩm 4", price: "150.000đ", img: " /assets/images/mau_dau_dieu.png" },
-        { id: 5, name: "Sản phẩm 5", price: "180.000đ", img: " /assets/images/mau_dau_dieu.png" },
-        { id: 6, name: "Sản phẩm 6", price: "230.000đ", img: " /assets/images/mau_dau_dieu.png" },
-        { id: 7, name: "Sản phẩm 7", price: "400.000đ", img: " /assets/images/mau_dau_dieu.png" },
-        { id: 8, name: "Sản phẩm 8", price: "220.000đ", img: " /assets/images/mau_dau_dieu.png" },
-        { id: 9, name: "Sản phẩm 9", price: "200.000đ", img: " /assets/images/mau_dau_dieu.png" },
-        { id: 10, name: "Sản phẩm 10", price: "350.000đ", img: " /assets/images/mau_dau_dieu.png" },
-        { id: 11, name: "Sản phẩm 11", price: "500.000đ", img: " /assets/images/mau_dau_dieu.png" },
-        { id: 12, name: "Sản phẩm 12", price: "150.000đ", img: " /assets/images/mau_dau_dieu.png" },
-        { id: 13, name: "Sản phẩm 13", price: "180.000đ", img: " /assets/images/mau_dau_dieu.png" },
-        { id: 14, name: "Sản phẩm 14", price: "230.000đ", img: " /assets/images/mau_dau_dieu.png" },
-        { id: 15, name: "Sản phẩm 15", price: "400.000đ", img: " /assets/images/mau_dau_dieu.png" },
-        { id: 16, name: "Sản phẩm 16", price: "220.000đ", img: " /assets/images/mau_dau_dieu.png" },
-    ];
-    const itemsPerPage = 12;
+    let quantityValue, decreaseBtn, increaseBtn;
+    let selectedQuantity = 1;
+    let stock = 0;
     let currentPage = 1;
-    const totalPages = Math.ceil(products.length / itemsPerPage);
+    const itemsPerPage = 12;
 
-    const productList = document.getElementById("product-list");
-    const pageNumbers = document.getElementById("pageNumbers");
-    const prevPageBtn = document.getElementById("prevPage");
-    const nextPageBtn = document.getElementById("nextPage");
-
-    function renderProducts(page) {
-        productList.innerHTML = "";
-        const start = (page - 1) * itemsPerPage;
-        const end = start + itemsPerPage;
-        const paginatedProducts = products.slice(start, end);
-
-        paginatedProducts.forEach(product => {
-            const productHTML = `
-                <div class="product-item">
-                    <button class="openModalBtn" data-id="${product.id}">
-                        <img src="${product.img}" alt="${product.name}">
-                    </button>
-                    <p>${product.name}</p>
-                    <span>${product.price}</span>
-                    <button>Thêm vào giỏ</button>
-                </div>
-            `;
-            productList.innerHTML += productHTML;
-        });
-
+    function attachOpenModalEvents() {
         document.querySelectorAll(".openModalBtn").forEach(button => {
             button.addEventListener("click", function () {
-                const productId = this.getAttribute("data-id");
-                viewProduct(productId);
+                const imgSrc = this.getAttribute("data-img");
+                const name = this.getAttribute("data-name");
+                const price = this.getAttribute("data-price");
+                const mota = this.getAttribute("data-mota");
+                const masp = this.getAttribute("data-masp");
+                stock = parseInt(this.getAttribute("data-soluong"));
+
+                document.getElementById("modalImage").src = imgSrc;
+                document.getElementById("modalProductName").innerText = name;
+                document.getElementById("modalProductCode").innerText = masp;
+                document.getElementById("modalProductPrice").innerText = price;
+                document.getElementById("modalProductStock").innerText = "Số lượng còn lại: " + stock;
+
+                const descriptionList = document.getElementById("modalProductDescription");
+                descriptionList.innerHTML = '';
+                mota.split('\n').forEach(line => {
+                    if (line.trim() !== '') {
+                        const li = document.createElement("li");
+                        li.textContent = line.trim();
+                        descriptionList.appendChild(li);
+                    }
+                });
+
+                selectedQuantity = 1;
+                quantityValue.innerText = selectedQuantity;
+
+                document.getElementById("productModal").style.display = "flex";
             });
         });
     }
 
-    function viewProduct(productId) {
-        const product = products.find(p => p.id == productId);
-        if (!product) return;
+    function setupQuantityButtons() {
+        decreaseBtn.addEventListener("click", function () {
+            if (selectedQuantity > 1) {
+                selectedQuantity--;
+                quantityValue.innerText = selectedQuantity;
+            }
+        });
 
-        document.querySelector(".product-image img").src = product.img;
-        document.querySelector(".product-info h2").innerText = product.name;
-        document.querySelector(".product-info .price").innerText = product.price;
-
-        document.getElementById("productModal").style.display = "flex";
+        increaseBtn.addEventListener("click", function () {
+            if (selectedQuantity < stock) {
+                selectedQuantity++;
+                quantityValue.innerText = selectedQuantity;
+            }
+        });
     }
+
+    function performFilterAndSort(sortOrder = '') {
+        let selectedLoaiBtn = document.querySelector('.category-buttons button.active');
+        let selectedLoai = selectedLoaiBtn ? selectedLoaiBtn.value : "";
+        document.getElementById("overlay").style.display = "none"; 
+        document.body.style.overflow = "auto"; 
+
+        let selectedPrices = [];
+        document.querySelectorAll('input[name="price"]:checked').forEach(checkbox => {
+            selectedPrices.push(checkbox.value);
+        });
+
+        const data = new FormData();
+        data.append('loai', selectedLoai);
+        data.append('prices', JSON.stringify(selectedPrices));
+        if (sortOrder) data.append('sort', sortOrder);
+
+        fetch('/php/filter_spices.php', {
+            method: 'POST',
+            body: data
+        })
+        .then(response => response.text())
+        .then(html => {
+            document.getElementById("product-list").innerHTML = html;
+            attachOpenModalEvents();
+            renderProducts(currentPage);
+            document.getElementById("filterBox").classList.remove("show");
+            document.getElementById("openFilter").classList.remove("active");
+        })
+        .catch(error => console.error('Lỗi:', error));
+    }
+
+    function renderProducts(page) {
+        const productItems = Array.from(document.querySelectorAll("#product-list .product-item"));
+        const totalProducts = productItems.length;
+        const totalPages = Math.ceil(totalProducts / itemsPerPage);
+
+        productItems.forEach(item => item.style.display = "none");
+
+        const start = (page - 1) * itemsPerPage;
+        const end = start + itemsPerPage;
+        productItems.slice(start, end).forEach(item => item.style.display = "flex");
+
+        const pageNumbers = document.getElementById("pageNumbers");
+        pageNumbers.innerHTML = '';
+        for (let i = 1; i <= totalPages; i++) {
+            const btn = document.createElement("button");
+            btn.textContent = i;
+            btn.classList.add("page-btn");
+            if (i === page) btn.classList.add("active");
+            btn.addEventListener("click", function () {
+                currentPage = i;
+                renderProducts(currentPage);
+            });
+            pageNumbers.appendChild(btn);
+        }
+
+        document.getElementById("prevPage").disabled = (page === 1);
+        document.getElementById("nextPage").disabled = (page === totalPages);
+    }
+
+
+    document.getElementById("openFilter").addEventListener("click", function () {
+        document.getElementById("filterBox").classList.add("show");
+        this.classList.toggle("active");
+        document.getElementById("overlay").style.display = "block"; 
+        document.body.style.overflow = "hidden"; 
+    });
+
+    document.getElementById("closeFilter").addEventListener("click", function () {
+        document.getElementById("filterBox").classList.remove("show");
+        document.getElementById("openFilter").classList.remove("active");
+        document.getElementById("overlay").style.display = "none";    
+        document.body.style.overflow = "auto";
+    });
+
+    document.querySelectorAll(".category-buttons button").forEach(button => {
+        button.addEventListener("click", function () {
+            document.querySelectorAll(".category-buttons button").forEach(btn => btn.classList.remove("active"));
+            this.classList.add("active");
+        });
+    });
+
+    const sortToggle = document.getElementById("sortToggle");
+    const sortOptions = document.getElementById("sortOptions");
+
+    sortToggle.addEventListener("click", function (event) {
+        event.stopPropagation();
+        sortOptions.classList.toggle("show");
+        sortToggle.classList.toggle("active");
+        if (sortOptions.classList.contains("show")) {
+            const rect = sortToggle.getBoundingClientRect();
+            sortOptions.style.top = `${rect.bottom + window.scrollY + 10}px`;
+            sortOptions.style.left = `${rect.left + window.scrollX-50}px`;
+        }
+    });
+
+    document.addEventListener("click", function (event) {
+        if (!sortOptions.contains(event.target) && !sortToggle.contains(event.target)) {
+            sortOptions.classList.remove("show");
+            sortToggle.classList.remove("active");
+        }
+    });
+
+    document.querySelector(".filter-button").addEventListener("click", function (e) {
+        e.preventDefault();
+        performFilterAndSort();
+    });
+
+    document.querySelectorAll("#sortOptions button").forEach(sortBtn => {
+        sortBtn.addEventListener("click", function () {
+            const sortOrder = this.getAttribute("data-sort");
+            performFilterAndSort(sortOrder);
+            sortOptions.classList.remove("show");
+            sortToggle.classList.remove("active");
+        });
+    });
+
+    document.getElementById("add-to-cart").addEventListener("click", function () {
+        alert(`Đã thêm ${selectedQuantity} sản phẩm vào giỏ hàng!`);
+        document.getElementById("productModal").style.display = "none";
+    });
 
     document.querySelector(".close").addEventListener("click", function () {
         document.getElementById("productModal").style.display = "none";
@@ -152,44 +187,27 @@ document.addEventListener("DOMContentLoaded", function () {
         }
     });
 
-    function renderPagination() {
-        pageNumbers.innerHTML = "";
-        for (let i = 1; i <= totalPages; i++) {
-            const btn = document.createElement("button");
-            btn.innerText = i;
-            btn.classList.add("page-btn");
-            if (i === currentPage) {
-                btn.classList.add("active");
-            }
-            btn.addEventListener("click", function () {
-                currentPage = i;
-                updateUI();
-            });
-            pageNumbers.appendChild(btn);
-        }
-    }
-
-    function updateUI() {
-        renderProducts(currentPage);
-        renderPagination();
-        prevPageBtn.disabled = currentPage === 1;
-        nextPageBtn.disabled = currentPage === totalPages;
-    }
-
-    prevPageBtn.addEventListener("click", function () {
+    document.getElementById("prevPage").addEventListener("click", function () {
         if (currentPage > 1) {
             currentPage--;
-            updateUI();
+            renderProducts(currentPage);
         }
     });
 
-    nextPageBtn.addEventListener("click", function () {
+    document.getElementById("nextPage").addEventListener("click", function () {
+        const productItems = Array.from(document.querySelectorAll("#product-list .product-item"));
+        const totalPages = Math.ceil(productItems.length / itemsPerPage);
         if (currentPage < totalPages) {
             currentPage++;
-            updateUI();
+            renderProducts(currentPage);
         }
     });
 
-    updateUI();
+    quantityValue = document.getElementById("quantityValue");
+    decreaseBtn = document.getElementById("decrease");
+    increaseBtn = document.getElementById("increase");
 
+    setupQuantityButtons();
+    attachOpenModalEvents();
+    renderProducts(currentPage);
 });

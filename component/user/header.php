@@ -23,9 +23,9 @@
                 <img src="/assets/images/down-chevron-yellow-gradient-16168.png" alt="Dropdown Arrow">
             </div>
             <div class="dropdown-menu">
-                <a href="#">Thông tin tài khoản</a>
+                <a href="account.php">Thông tin tài khoản</a>
                 <hr>
-                <a href="#" class="logout">
+                <a href="signup_login.php" class="logout">
                     Đăng xuất 
                     <img src="/assets/images/yellow-shopping-cart-10916.png" alt="Logout">
                 </a>

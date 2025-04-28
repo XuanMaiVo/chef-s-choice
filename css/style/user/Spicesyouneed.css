@@ -149,6 +149,12 @@ button:hover {
     cursor: pointer;
     box-shadow:3px 3px 5px rgba(0, 0, 0, 0.5); 
 }
+.category-buttons button.active {
+    background: #B71C1C;
+    color: white;
+    border-color: #B71C1C;
+}
+
 .close-button {
     display: block;
     background: gray !important;
@@ -156,6 +162,15 @@ button:hover {
     border: none;
     cursor: pointer;
 }
+
+#overlay {
+    position: fixed;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background: rgba(0,0,0,0.3); /* nền mờ đen */
+    z-index: 999; /* dưới filterBox nhưng trên mọi thứ khác */
+    display: none;
+}
+
 
 .sort-btn.active {
     background-color: #B71C1C;
@@ -176,11 +191,15 @@ button:hover {
     box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
     display: none;
     position: absolute;
-    bottom: 132%; 
-    left: 85%;
     width: 220px;
     z-index: 1000;  
+    display: none;
 }
+
+.sort-container.show {
+    display: block;
+}
+
 .sort-container button{
     background-color: #d0caca;
     width: 100%;
@@ -254,7 +273,7 @@ button:hover {
     background-color: #FFD700;
 }
 .product-item img {
-    width: 100px;
+    width: 50px;
     height: 100px;
 }
 

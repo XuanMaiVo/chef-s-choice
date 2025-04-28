@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>DỤNG CỤ NHÀ BẾP</title>
-    <link rel="stylesheet" href="/css/style/user/Spicesyouneed.css">
+    <link rel="stylesheet" href="../../css/style/user/Kitchentools.css">
 
 </head>
 <body>

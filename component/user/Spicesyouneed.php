@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>GIA VỊ BẠN CẦN</title>
-    <link rel="stylesheet" href="/css/style/user/Spicesyouneed.css">
+    <link rel="stylesheet" href="../../css/style/user/Spicesyouneed.css">
 
 </head>
 <body>
@@ -126,7 +126,7 @@
             <button id="nextPage">&raquo;</button>
         </div>
     </section>
-    <script src="/js/Spicesyouneed.js"></script>
+    <script src="../../js/Spicesyouneed.js"></script>
     <?php
     include("footer.php");     
     ?>

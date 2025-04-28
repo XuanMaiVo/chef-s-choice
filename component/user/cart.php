@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Giỏ hàng</title>
-    <link rel="stylesheet" href="/chef%27schoice/chef-s-choice/css/style/user/cart.css">
+    <link rel="stylesheet" href="../../css/style/user/cart.css">
     <link
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
       rel="stylesheet"
@@ -13,7 +13,7 @@
 <body>
     <div class="cart-header">
         <div class="cart-header__logo">
-            <img src="/chef%27schoice/chef-s-choice/assets/images/chef's_choice_logo.png" alt="logo">
+            <img src="../../assets/images/chef's_choice_logo.png" alt="logo">
         </div>
         <div class="cart-header__content">
             <div class="cart-header__actions">
@@ -61,7 +61,7 @@
                 <tbody class="cart-table__items">
                     <tr>
                         <td class="cart-image">
-                            <img src="/chef%27schoice/chef-s-choice/assets/images/ly-thuy-tinh.png" alt="ly" class="cart-image__img">
+                            <img src="../../assets/images/ly-thuy-tinh.png" alt="ly" class="cart-image__img">
                         </td>
                         <td class="cart-name">Ly 330ml</td>
                         <td class="cart-price">10000</td>
@@ -77,7 +77,7 @@
                     </tr>
                     <tr>
                         <td class="cart-image">
-                            <img src="/chef%27schoice/chef-s-choice/assets/images/ly-thuy-tinh.png" alt="ly" class="cart-image__img">
+                            <img src="../../assets/images/ly-thuy-tinh.png" alt="ly" class="cart-image__img">
                         </td>
                         <td class="cart-name">Ly 330ml</td>
                         <td class="cart-price">10000</td>
@@ -93,7 +93,7 @@
                     </tr>
                     <tr>
                         <td class="cart-image">
-                            <img src="/chef%27schoice/chef-s-choice/assets/images/ly-thuy-tinh.png" alt="ly" class="cart-image__img">
+                            <img src="../../assets/images/ly-thuy-tinh.png" alt="ly" class="cart-image__img">
                         </td>
                         <td class="cart-name">Ly 330ml</td>
                         <td class="cart-price">10000</td>
@@ -109,7 +109,7 @@
                     </tr>
                     <tr>
                         <td class="cart-image">
-                            <img src="/chef%27schoice/chef-s-choice/assets/images/ly-thuy-tinh.png" alt="ly" class="cart-image__img">
+                            <img src="../../assets/images/ly-thuy-tinh.png" alt="ly" class="cart-image__img">
                         </td>
                         <td class="cart-name">Ly 330ml</td>
                         <td class="cart-price">10000</td>
@@ -150,7 +150,7 @@
             <button id="cnoti-continue-btn"></button>
         </div>
     </dialog>
-    <script src="/chef%27schoice/chef-s-choice/js/addtocart.js"></script>
-    <script src="/chef%27schoice/chef-s-choice/js/cart.js"></script>
+    <script src="../../js/addtocart.js"></script>
+    <script src="../../js/cart.js"></script>
 </body>
 </html>
